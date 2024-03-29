@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Gloock&family=Lato&display=swap");
+
+* {
+  -webkit-transition: all 0.4s ease-out !important;
+  -moz-transition: all 0.4s ease-out !important;
+  -ms-transition: all 0.4s ease-out !important;
+  -o-transition: all 0.4s ease-out !important;
+  transition: all 0.4s ease-out !important;
+}
+
+/* MANSONRY */
+
+.gal {
+  margin-top: 3rem;
+  -webkit-column-count: 4;
+  /* Chrome, Safari, Opera */
+  -moz-column-count: 4;
+  /* Firefox */
+  column-count: 4;
+}
+
+.gal img {
+  height: auto;
+}
+
+@media (max-width: 769px) {
+  .gal {
+    -webkit-column-count: 1;
+    /* Chrome, Safari, Opera */
+    -moz-column-count: 1;
+    /* Firefox */
+    column-count: 1;
+  }
+}
+
+/* DESIGN */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  font-size: 18px;
+  color: white;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: -2;
+  mix-blend-mode: hard-light;
+}
+
+.bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -3;
+  background-image: url(https://www.jellypir.at/CODEPEN/picture/very/jellyfish_21.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100%;
+}
+
+h2 {
+  font-family: "Gloock", serif;
+  font-size: 2.6rem;
+}
+
+.gal-h-title {
+  text-align: center;
+}
+
+.gal img,
+.img-hover-zoom {
+  border-radius: 25px;
+}
+
+.nav-pills .nav-link {
+  color: white;
+  padding: 10px 20px;
+  text-transform: uppercase;
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link,
+.nav-pills .nav-link.active:hover {
+  background: #4cb8c4;
+  background: linear-gradient(135deg, #523ee8, #00dcaf);
+  border-radius: 100px;
+}
+.nav-pills .nav-link:hover {
+  background: #4cb8c4;
+  background: linear-gradient(135deg, #523ee88c, #00dcaf6e);
+  border-radius: 100px;
+}
+
+/* ZOOM IN EFFECT */
+/* The tutorial I used : https://w3bits.com/css-image-hover-zoom/ */
+/* [1] The container */
+.img-hover-zoom {
+  padding: 10px 0;
+  overflow: hidden;
+  /* [1.2] Hide the overflowing of child elements */
+}
+
+/* Transition property for smooth transformation of images */
+.img-hover-zoom img {
+  transition: transform 0.5s ease;
+}
+
+/* Zoom-n-rotate Container */
+.img-hover-zoom--zoom-n-rotate img {
+  transition: transform 0.5s ease-in-out;
+}
+
+/* The Transformation */
+.img-hover-zoom--zoom-n-rotate:hover img {
+  transform: scale(1.6) rotate(25deg);
+}
